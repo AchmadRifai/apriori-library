@@ -37,10 +37,8 @@ public class AprioriUtil {
         return IntStream.range(0, barangs.size())
                 .boxed()
                 .parallel()
-                .peek(i->log.log(Level.INFO, "{0}", i))
                 .map(this::treshold)
                 .filter(m->!m.isEmpty())
-                .peek(l->log.log(Level.INFO, "Treshold : {0}", l))
                 .sequential()
                 .reduce(new ArrayList<>(), (l1, l2)->{
                     l1.addAll(l2);
@@ -65,20 +63,17 @@ public class AprioriUtil {
 
     private List<AprioryBigDecimalSupport> treshold(int i) {
         final List<String> alle = combining(i);
-        log.log(Level.INFO, "combining is {0}", alle);
-    	return alle.parallelStream()
+        return alle.parallelStream()
                 .filter(StringUtils::nonBlank)
                 .map(s->AprioryLongSupport.builder()
                         .name(s)
                         .value(counting(s))
                         .build())
-                .peek(a->log.log(Level.INFO, "support :{0}", a))
                 .map(a->AprioryBigDecimalSupport.builder()
                         .name(a.getName())
                         .value(BigDecimal.valueOf(a.getValue()).divide(BigDecimal.valueOf(all), MathContext.DECIMAL128))
                         .build())
                 .filter(a->-1 == BigDecimal.valueOf(0.1).compareTo(a.getValue()))
-                .peek(a->log.log(Level.INFO, "tresholding :{0}", a))
                 .collect(Collectors.toList());
     }
 
@@ -104,7 +99,6 @@ public class AprioriUtil {
     }
 
     private long counting(String s) {
-        log.log(Level.INFO, "counting {0}", s);
         Map<String, List<ItemJual>> map = itemJuals.parallelStream()
                 .filter(Objects::nonNull)
                 .collect(Collectors.groupingBy(ItemJual::getNota, Collectors.toList()));
