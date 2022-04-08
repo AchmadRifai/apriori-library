@@ -1,0 +1,86 @@
+kombinasi,treshold
+Cabe Merah Besar,0.6557404372343676213228145226256285
+Jagung,0.6496013778160504458457179366093503
+Minyak Goreng,0.6477124364565682380066112947581877
+Bawang Merah,0.6544070668629684157893274813189255
+Telur Ayam,0.6564904580682796744354009833606489
+Cabe Merah Keriting,0.6594905414039278868857468263007306
+Cabe Rawit Merah,0.6554626517403261201700047223533987
+Beras Medium,0.6539348315230978638295508208561349
+Daging Ayam,0.6494347065196255451540320564460124
+Bawang Putih Kating,0.6551293091474763187866329620267230
+Bawang Bonggol,0.6500180560571126975749326370176949
+Terigu,0.6534348176338231617544931803661213
+Gula Pasir,0.6520736687130198061057251590321953
+Kedelai,0.6530181393927609100252784799577766
+Daging Sapi,0.6530181393927609100252784799577766
+Beras Termurah,0.6506847412428123003416761576710464
+Beras premium,0.6547681880052223672879802216728242
+Cabe Merah Besar dan Jagung,0.4251506986305175143753993166476847
+Jagung dan Minyak Goreng,0.4204839023306202950081946720742243
+Bawang Merah dan Minyak Goreng,0.4242617850495847106864079557765493
+Bawang Merah dan Telur Ayam,0.4304286230173060362787855218200506
+Cabe Merah Keriting dan Telur Ayam,0.4340953915386538514958748854134837
+Cabe Merah Keriting dan Cabe Rawit Merah,0.4323175643767882441178921636712131
+Beras Medium dan Cabe Rawit Merah,0.4302063946220728353565376816022667
+Beras Medium dan Daging Ayam,0.4236228784132892580349454151504208
+Bawang Putih Kating dan Daging Ayam,0.4257618267174088169115808772465902
+Bawang Bonggol dan Bawang Putih Kating,0.4259284980138337176032667574099281
+Bawang Bonggol dan Terigu,0.4252895913775382649518042167837995
+Gula Pasir dan Terigu,0.4253729270257507152976471568654685
+Gula Pasir dan Kedelai,0.4247062418400511125309036362121170
+Daging Sapi dan Kedelai,0.4248173560376677129920275563210089
+Beras Termurah dan Daging Sapi,0.4231506430734187060751687546876302
+Beras premium dan Beras Termurah,0.4262340620572793688713575377093808
+Beras premium dan Cabe Merah Besar,0.4306786299619433873163143420650574
+Cabe Merah Besar dan Jagung dan Minyak Goreng,0.2750354176504902913969832495347093
+Bawang Merah dan Jagung dan Minyak Goreng,0.2768688019111641990055279313314259
+Bawang Merah dan Minyak Goreng dan Telur Ayam,0.2798133281480041112253118142170616
+Bawang Merah dan Cabe Merah Keriting dan Telur Ayam,0.2843134531514764299008305786271841
+Cabe Merah Keriting dan Cabe Rawit Merah dan Telur Ayam,0.2829523042306730742520625572932581
+Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah,0.2855634878746631850884746798522181
+Beras Medium dan Cabe Rawit Merah dan Daging Ayam,0.2779521653379260535014861523931220
+Bawang Putih Kating dan Beras Medium dan Daging Ayam,0.2781188366343509541931720325564599
+Bawang Bonggol dan Bawang Putih Kating dan Daging Ayam,0.2764521236701019472763132309230812
+Bawang Bonggol dan Bawang Putih Kating dan Terigu,0.2793688713575377093808161337814939
+Bawang Bonggol dan Gula Pasir dan Terigu,0.2777577154920970026945192922025612
+Gula Pasir dan Kedelai dan Terigu,0.2770632517569932498124947915219867
+Daging Sapi dan Gula Pasir dan Kedelai,0.2770632517569932498124947915219867
+Beras Termurah dan Daging Sapi dan Kedelai,0.2762298952748687463540653907052974
+Beras premium dan Beras Termurah dan Daging Sapi,0.2769521375593766493513708714130948
+Beras premium dan Beras Termurah dan Cabe Merah Besar,0.2797299924997916608794688741353926
+Beras premium dan Cabe Merah Besar dan Jagung,0.2786466290730298063835106530736965
+Bawang Merah dan Cabe Merah Besar dan Jagung dan Minyak Goreng,0.1809494708186338509403038973304814
+Bawang Merah dan Jagung dan Minyak Goreng dan Telur Ayam,0.1831161976721575599322203394538737
+Bawang Merah dan Cabe Merah Keriting dan Minyak Goreng dan Telur Ayam,0.1851718103280646684630128614683741
+Bawang Merah dan Cabe Merah Keriting dan Cabe Rawit Merah dan Telur Ayam,0.1848384677352148670796411011416984
+Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah dan Telur Ayam,0.1870885302369510264174004833467596
+Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah dan Daging Ayam,0.1850884746798522181171699213867052
+Bawang Putih Kating dan Beras Medium dan Cabe Rawit Merah dan Daging Ayam,0.1819217200477791049751381982832856
+Bawang Bonggol dan Bawang Putih Kating dan Beras Medium dan Daging Ayam,0.1811716992138670518625517375482652
+Bawang Bonggol dan Bawang Putih Kating dan Daging Ayam dan Terigu,0.1824495124864579571654768188005222
+Bawang Bonggol dan Bawang Putih Kating dan Gula Pasir dan Terigu,0.1834773188144115114308730798077724
+Bawang Bonggol dan Gula Pasir dan Kedelai dan Terigu,0.1802272285341259479429984166226840
+Daging Sapi dan Gula Pasir dan Kedelai dan Terigu,0.1806716853245923497874940970582516
+Beras Termurah dan Daging Sapi dan Gula Pasir dan Kedelai,0.1797549931942553959832217561598933
+Beras premium dan Beras Termurah dan Daging Sapi dan Kedelai,0.1795327647990221950609739159421095
+Beras premium dan Beras Termurah dan Cabe Merah Besar dan Daging Sapi,0.1823939553876496569349148587460763
+Beras premium dan Beras Termurah dan Cabe Merah Besar dan Jagung,0.1807550209728048001333370371399206
+Beras premium dan Cabe Merah Besar dan Jagung dan Minyak Goreng,0.1800605572377010472513125364593461
+Bawang Merah dan Cabe Merah Besar dan Jagung dan Minyak Goreng dan Telur Ayam,0.1193922053390371954776521570043612
+Bawang Merah dan Cabe Merah Keriting dan Jagung dan Minyak Goreng dan Telur Ayam,0.1207811328092447012417011583655102
+Bawang Merah dan Cabe Merah Keriting dan Cabe Rawit Merah dan Minyak Goreng dan Telur Ayam,0.1213367037973277035473207589099697
+Bawang Merah dan Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah dan Telur Ayam,0.1226978527181310591960887802438957
+Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah dan Daging Ayam dan Telur Ayam,0.1222811744770688074668740798355510
+Bawang Putih Kating dan Beras Medium dan Cabe Merah Keriting dan Cabe Rawit Merah dan Daging Ayam,0.1225034028723020083891219200533348
+Bawang Bonggol dan Bawang Putih Kating dan Beras Medium dan Cabe Rawit Merah dan Daging Ayam,0.1188644129003583432873135364871246
+Bawang Bonggol dan Bawang Putih Kating dan Beras Medium dan Daging Ayam dan Terigu,0.1186421845051251423650656962693408
+Bawang Bonggol dan Bawang Putih Kating dan Daging Ayam dan Gula Pasir dan Terigu,0.1211422539514986527403538987194089
+Bawang Bonggol dan Bawang Putih Kating dan Gula Pasir dan Kedelai dan Terigu,0.1200588905247367982443956776577127
+Bawang Bonggol dan Daging Sapi dan Gula Pasir dan Kedelai dan Terigu,0.1173921497819383871774215950443068
+Beras Termurah dan Daging Sapi dan Gula Pasir dan Kedelai dan Terigu,0.1169199144420678352176449345815162
+Beras premium dan Beras Termurah dan Daging Sapi dan Gula Pasir dan Kedelai,0.1174477068807466874079835550987527
+Beras premium dan Beras Termurah dan Cabe Merah Besar dan Daging Sapi dan Kedelai,0.1180588349676379899441651156976583
+Beras premium dan Beras Termurah dan Cabe Merah Besar dan Daging Sapi dan Jagung,0.1185032917581043917886607961332259
+Beras premium dan Beras Termurah dan Cabe Merah Besar dan Jagung dan Minyak Goreng,0.1164754576516014333731492541459485
+Bawang Merah dan Beras premium dan Cabe Merah Besar dan Jagung dan Minyak Goreng,0.1182810633628711908664129559154421

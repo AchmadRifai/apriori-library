@@ -34,10 +34,14 @@ public class StringUtils {
     }
 
     public static String combineToString(String[] s) {
-        return Stream.of(s)
-                .filter(Objects::nonNull)
-                .map(StringUtils::escapeSpecialChar)
-                .collect(Collectors.joining(CsvContants.CSV_DELIMITER));
+        Stream<String> ss = Stream.of(s);
+    	try {
+    		return ss.filter(Objects::nonNull)
+                    .map(StringUtils::escapeSpecialChar)
+                    .collect(Collectors.joining(CsvContants.CSV_DELIMITER));
+    	} finally {
+			ss.close();
+		}
     }
 
     public static String escapeSpecialChar(String s1) {

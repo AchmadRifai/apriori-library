@@ -6,7 +6,6 @@ package achmad.rifai.apriori.library.writer;
 
 import achmad.rifai.apriori.library.model.Barang;
 import achmad.rifai.apriori.library.util.AprioryBigDecimalSupport;
-import achmad.rifai.apriori.library.util.DirsUtil;
 import achmad.rifai.apriori.library.util.StringUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,32 +31,52 @@ public class AprioryWriter {
     private final List<Barang> barangs;
 
     public void write(String path) {
-        DirsUtil.mkdirs(path);
+    	log.log(Level.INFO, "writing in {0}", path);
         File f = new File(path);
+        if (!f.getParentFile().exists()) f.getParentFile().mkdirs();
         if (f.exists()) f.delete();
+        Stream<AprioryBigDecimalSupport> sa = apriory.stream()
+        		.onClose(()->{
+        			log.log(Level.INFO, "wrote in {0}", path);
+        			System.gc();
+        			System.exit(0);
+        		});
         try (PrintWriter p = new PrintWriter(f)) {
             p.println("kombinasi,treshold");
-            apriory.parallelStream()
-                    .filter(Objects::nonNull)
+            sa.filter(Objects::nonNull)
                     .map(a->new String[]{a.getName(), a.getValue().toString()})
                     .map(this::toName)
                     .map(StringUtils::combineToString)
                     .forEach(p::println);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(AprioryWriter.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } finally {
+			sa.close();
+		}
     }
 
     private String[] toName(String[] sa) {
         String[] s2 = sa;
-        s2[0] = Stream.of(s2[0].split("&"))
-                .parallel()
-                .map(s->barangs.parallelStream().filter(b->Objects.deepEquals(b.getKode(), s)).findFirst())
-                .filter(Optional::isPresent)
-                .map(Optional::get)
-                .map(Barang::getNama)
-                .collect(Collectors.joining(" dan "));
-        return s2;
+        Stream<String> ss = Stream.of(s2[0].split("&"));
+        try {
+        	s2[0] = ss.map(s->{
+                    	Stream<Barang> sb = barangs.stream();
+                    	try {
+                    		return sb.filter(Objects::nonNull).filter(b->Objects.deepEquals(b.getKode(), s)).findFirst();
+                    	} finally {
+							sb.close();
+						}
+                    })
+                    .filter(Optional::isPresent)
+                    .map(Optional::get)
+                    .map(Barang::getNama)
+                    .collect(Collectors.joining(" dan "));
+            return s2;
+        } finally {
+			ss.close();
+		}
     }
+
+    private static final Logger log = Logger.getLogger(AprioryWriter.class.getName());
 
 }

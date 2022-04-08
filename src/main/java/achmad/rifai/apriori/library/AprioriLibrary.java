@@ -29,12 +29,10 @@ public class AprioriLibrary {
 
     public static void main(String[] args) {
         initData();
-        System.out.println(ZonedDateTime.now());
         ItemJualReader r4 = ItemJualReader.builder().path(CsvContants.ITEM_JUAL_PATH).build();
         List<ItemJual> itemJuals = r4.read();
         AprioriUtil util = AprioriUtil.builder().itemJuals(itemJuals).build();
         List<AprioryBigDecimalSupport> apriory = util.apriory();
-        System.out.println(ZonedDateTime.now());
         BarangReader r2 = BarangReader.builder().path(CsvContants.BARANG_PATH).build();
         AprioryWriter.builder().apriory(apriory).barangs(r2.reading()).build().write(CsvContants.OUT_PATH);
     }
